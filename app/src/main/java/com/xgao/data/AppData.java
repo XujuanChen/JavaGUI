@@ -24,7 +24,7 @@ public class AppData implements AppDataComponent{
      * @param initApp The application this data manager belongs to. 
      */
     public AppData(App initApp) {
-
+        this.app = initApp;
     }
 
 
