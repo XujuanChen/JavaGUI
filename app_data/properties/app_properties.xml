@@ -31,7 +31,7 @@
         <property name="HAS_WELCOME_DIALOG"     value="true"></property>
         <property name="HAS_TOP_TOOLBAR"        value="true"></property>        
         <property name="HAS_FILE_TOOLBAR"       value="true"></property>
-        <property name="HAS_NEW"                value="true"></property>
+        <property name="HAS_NEW"                value="false"></property>
         <property name="HAS_LOAD"               value="true"></property>
         <property name="HAS_CLOSE"              value="true"></property>
         <property name="HAS_SAVE"               value="true"></property>
