@@ -6,7 +6,7 @@
 package com.xgao.files;
 
 import com.xgao.App;
-import com.xgao.workspace.dialogs.CustomAlert;
+import com.xgao.dialogs.CustomAlert;
 import libs.DesktopJavaFramework.components.AppDataComponent;
 import libs.DesktopJavaFramework.components.AppFileComponent;
 
