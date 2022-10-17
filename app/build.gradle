@@ -78,3 +78,12 @@ jlink {
         //jvmArgs = ['-Djdk.gtk.version=2'] // required due to a bug in Java: https://github.com/javafxports/openjdk-jfx/issues/175
     }
 }
+
+tasks.jlink.doLast {
+    copy {
+        from("../") {
+            include "app_data/**"
+        }
+        into "./build/image/bin"
+    }
+}
