@@ -6,12 +6,20 @@
  * User Manual available at https://docs.gradle.org/7.3.3/userguide/building_java_projects.html
  */
 
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.11'
     id 'java'
+    id 'org.beryx.jlink' version "2.25.0"
 }
 
 repositories {
@@ -57,4 +65,16 @@ sourceSets {
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+
+run {
+    //jvmArgs = ['-Djdk.gtk.version=2'] // required due to a bug in Java: https://github.com/javafxports/openjdk-jfx/issues/175
+}
+
+jlink {
+    launcher {
+        name = 'Java GUI'
+        //jvmArgs = ['-Djdk.gtk.version=2'] // required due to a bug in Java: https://github.com/javafxports/openjdk-jfx/issues/175
+    }
 }
