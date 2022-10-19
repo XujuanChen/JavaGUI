@@ -210,7 +210,7 @@ public abstract class AppTemplate extends Application {
         // IT'S MINIMAL LANGUAGE PROPERTIES IN CASE OF ERROR
         PropertiesManager props = PropertiesManager.getPropertiesManager();
         props.addProperty(AppPropertyType.APP_ERROR_TITLE, "Application Error");
-        props.addProperty(AppPropertyType.APP_ERROR_CONTENT, "An Error Occured in the Application");
+        props.addProperty(AppPropertyType.APP_ERROR_CONTENT, "An Error Occurred in the Application");
         props.addProperty(AppPropertyType.PROPERTIES_ERROR_TITLE, "Properties File Error");
         props.addProperty(AppPropertyType.PROPERTIES_ERROR_CONTENT, "There was an Error Loading a Properties File");
         

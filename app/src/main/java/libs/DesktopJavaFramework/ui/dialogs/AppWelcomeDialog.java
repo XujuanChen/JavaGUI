@@ -28,6 +28,7 @@ import libs.DesktopJavaFramework.AppPropertyType;
 import libs.DesktopJavaFramework.AppTemplate;
 import libs.DesktopJavaFramework.modules.AppLanguageModule;
 import libs.DesktopJavaFramework.modules.AppRecentWorkModule;
+import libs.DesktopJavaFramework.ui.style.DefaultStyleSheetPath;
 import libs.PropertiesManager.src.PropertiesManager;
 
 /**
@@ -51,6 +52,7 @@ public class AppWelcomeDialog extends Stage {
     String selectedWorkName = null;
 
     public AppWelcomeDialog(AppTemplate app) {
+
         // GET THE RECENT WORK
         AppRecentWorkModule recentWork = app.getRecentWorkModule();
                 
@@ -130,6 +132,7 @@ public class AppWelcomeDialog extends Stage {
         // MAKE AND SET THE SCENE
         Scene dialogScene = new Scene(dialogPane);
         this.setScene(dialogScene);
+
         
         for (Button b : recentWorkButtons) {
             b.setOnMouseEntered(e->{

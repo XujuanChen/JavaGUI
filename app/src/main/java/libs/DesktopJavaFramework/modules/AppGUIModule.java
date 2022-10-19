@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import libs.DesktopJavaFramework.AppPropertyType;
 import libs.DesktopJavaFramework.AppTemplate;
 import libs.DesktopJavaFramework.components.AppClipboardComponent;
+import libs.DesktopJavaFramework.ui.style.CssLoader;
 import libs.PropertiesManager.src.PropertiesManager;
 import libs.DesktopJavaFramework.AppTemplate;
 import static libs.DesktopJavaFramework.AppPropertyType.*;
@@ -470,13 +471,9 @@ public class AppGUIModule {
     public void initStylesheet(Stage stage) {
         // SELECT THE STYLESHEET
         PropertiesManager props = PropertiesManager.getPropertiesManager();
-        String stylesheet = props.getProperty(AppPropertyType.APP_PATH_CSS);
-        stylesheet += props.getProperty(AppPropertyType.APP_CSS);
-        Class appClass = app.getClass();
-        URL stylesheetURL = appClass.getClassLoader().getResource(stylesheet);
-        String stylesheetPath = stylesheetURL.toExternalForm();
+        String stylesheetPath = CssLoader.loadCss(APP_PATH_CSS, props);
         Scene scene = stage.getScene();
-        scene.getStylesheets().add(stylesheetPath);
+        scene.getStylesheets().add("file:/home/xgao/storage/JavaGUI/app/src/main/resources/css/app_style.css");
     }
 
     /**
@@ -493,4 +490,5 @@ public class AppGUIModule {
             styleClasses.add(CLASS_DJF_TOOLBAR_PANE);
         }
     }
+
 }
