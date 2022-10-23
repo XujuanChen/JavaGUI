@@ -15,3 +15,9 @@ more info on the config, https://stackoverflow.com/questions/53533486/how-to-ope
 # Packaging
 To avoid java -jar and all the args, the application needed to be package.
 https://steemit.com/java/@walczakit/distributing-javafx-desktop-applications-without-requiring-a-jvm-using-jlink-and-jpackage
+
+To generate executables
+./gradlew jlink
+
+To generate installers
+./gradlew jpackage -PinstallerType=deb
