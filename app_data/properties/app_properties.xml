@@ -16,7 +16,7 @@
         <property name="APP_HELP_PAGE"      value="Help.html"></property>
         <property name="APP_ABOUT_PAGE"     value="About.html"></property>
 	    <property name="APP_CSS"	        value="app_style.css"></property>
-        <property name="APP_PATH_CSS"	    value="com/xgao/workspace/style/"></property>
+        <property name="APP_PATH_CSS"	    value="./app_data/resources/app_style.css"></property>
         <property name="APP_PATH_EXPORT"    value="./export/"></property>
         <property name="APP_PATH_ICONS"     value="./app_data/images/icons/"></property>
         <property name="APP_PATH_IMAGES"    value="./app_data/images/"></property>

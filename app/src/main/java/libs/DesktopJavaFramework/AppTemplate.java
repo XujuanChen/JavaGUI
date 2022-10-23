@@ -271,6 +271,9 @@ public abstract class AppTemplate extends Application {
 
                     // NOW OPEN UP THE APPLICATION WINDOW
                     primaryStage.show();
+
+                    // move it to the front
+                    primaryStage.toFront();
             }
         }catch (Exception e) {
                 // THIS TYPE OF ERROR IS LIKELY DUE TO PROGRAMMER ERROR IN

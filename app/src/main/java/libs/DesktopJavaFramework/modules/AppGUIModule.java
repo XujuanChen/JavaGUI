@@ -14,6 +14,7 @@ import libs.DesktopJavaFramework.AppPropertyType;
 import libs.DesktopJavaFramework.AppTemplate;
 import libs.DesktopJavaFramework.components.AppClipboardComponent;
 import libs.DesktopJavaFramework.ui.style.CssLoader;
+import libs.DesktopJavaFramework.ui.style.DefaultStyleSheetPath;
 import libs.PropertiesManager.src.PropertiesManager;
 import libs.DesktopJavaFramework.AppTemplate;
 import static libs.DesktopJavaFramework.AppPropertyType.*;
@@ -471,9 +472,9 @@ public class AppGUIModule {
     public void initStylesheet(Stage stage) {
         // SELECT THE STYLESHEET
         PropertiesManager props = PropertiesManager.getPropertiesManager();
-        String stylesheetPath = CssLoader.loadCss(APP_PATH_CSS, props);
+        final String styleSheetPath = CssLoader.loadCss(DefaultStyleSheetPath.APP_PATH_CSS, props);
         Scene scene = stage.getScene();
-        scene.getStylesheets().add("file:/home/xgao/storage/JavaGUI/app/src/main/resources/css/app_style.css");
+        scene.getStylesheets().add(styleSheetPath);
     }
 
     /**

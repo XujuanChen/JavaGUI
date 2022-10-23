@@ -53,6 +53,8 @@ public class AppWelcomeDialog extends Stage {
 
     public AppWelcomeDialog(AppTemplate app) {
 
+        this.setResizable(false);
+
         // GET THE RECENT WORK
         AppRecentWorkModule recentWork = app.getRecentWorkModule();
                 
@@ -123,6 +125,7 @@ public class AppWelcomeDialog extends Stage {
         newPane.getChildren().add(createNewButton);
         splashPane.getChildren().add(welcomeDialogImageView);
         splashPane.getChildren().add(newPane);
+        splashPane.getStyleClass().add(CLASS_DJF_WELCOME_BANNER);
         
         // WE ORGANIZE EVERYTHING IN HERE
         BorderPane dialogPane = new BorderPane();
@@ -155,7 +158,6 @@ public class AppWelcomeDialog extends Stage {
 
         // SPECIFY THE STYLE THE BANNER AND NEW BUTTON
         app.getGUIModule().initStylesheet(this);
-        welcomeDialogImageView.getStyleClass().add(CLASS_DJF_WELCOME_BANNER);
         recentlyEditedPane.getStyleClass().add(CLASS_DJF_WELCOME_RECENT_PANE);
         recentWorkLabel.getStyleClass().add(CLASS_DJF_WELCOME_HEADER);
         newPane.getStyleClass().add(CLASS_DJF_WELCOME_NEW_PANE);

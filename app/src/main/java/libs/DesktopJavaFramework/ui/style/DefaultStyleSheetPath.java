@@ -1,8 +1,8 @@
 package libs.DesktopJavaFramework.ui.style;
 
 public enum DefaultStyleSheetPath {
-    WELCOME_DIALOG("css/welcome.css"),
-    APP("css/app_style.css");
+    WELCOME_DIALOG("libs/DesktopJavaFramework/ui/style/css/welcome.css"),
+    APP_PATH_CSS("libs/DesktopJavaFramework/ui/style/css/app_style.css");
 
     private String filePath;
     DefaultStyleSheetPath(String path){

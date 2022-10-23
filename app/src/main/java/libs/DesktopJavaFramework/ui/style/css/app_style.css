@@ -58,8 +58,8 @@ and open the template in the editor.
     -fx-background-color: linear-gradient(SWATCH_COMPLEMENT, SWATCH_BLEND);    
 }
 .djf_welcome_banner {
-    -fx-border-color:transparent;
-    -fx-border-width:10;
+    /*-fx-border-color:transparent;*/
+    /*-fx-border-width:10;*/
 }
 
 .djf_welcome_header {
